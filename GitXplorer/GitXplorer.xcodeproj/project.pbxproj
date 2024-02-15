@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810FEB562B7E66B400B2C1C7 /* ResponseValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */; };
+		810FEB582B7E673D00B2C1C7 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */; };
 		81CFB4122B7E13EA009F5634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4112B7E13EA009F5634 /* AppDelegate.swift */; };
 		81CFB4142B7E13EA009F5634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */; };
 		81CFB4162B7E13EA009F5634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4152B7E13EA009F5634 /* ViewController.swift */; };
@@ -16,6 +18,10 @@
 		81CFB4292B7E13EE009F5634 /* GitXplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4282B7E13EE009F5634 /* GitXplorerTests.swift */; };
 		81CFB4332B7E13EE009F5634 /* GitXplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4322B7E13EE009F5634 /* GitXplorerUITests.swift */; };
 		81CFB4352B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4342B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift */; };
+		81CFB4432B7E1F7E009F5634 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4422B7E1F7E009F5634 /* Network.swift */; };
+		81CFB4452B7E2010009F5634 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4442B7E2010009F5634 /* Router.swift */; };
+		81CFB4472B7E2322009F5634 /* WebOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4462B7E2322009F5634 /* WebOperation.swift */; };
+		81CFB4492B7E236E009F5634 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidation.swift; sourceTree = "<group>"; };
+		810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		81CFB40E2B7E13EA009F5634 /* GitXplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitXplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CFB4112B7E13EA009F5634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		81CFB42E2B7E13EE009F5634 /* GitXplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitXplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CFB4322B7E13EE009F5634 /* GitXplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitXplorerUITests.swift; sourceTree = "<group>"; };
 		81CFB4342B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitXplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81CFB4422B7E1F7E009F5634 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		81CFB4442B7E2010009F5634 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		81CFB4462B7E2322009F5634 /* WebOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebOperation.swift; sourceTree = "<group>"; };
+		81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructableRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		81CFB4102B7E13EA009F5634 /* GitXplorer */ = {
 			isa = PBXGroup;
 			children = (
+				81CFB4412B7E1F3D009F5634 /* Network */,
 				81CFB4112B7E13EA009F5634 /* AppDelegate.swift */,
 				81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */,
 				81CFB4152B7E13EA009F5634 /* ViewController.swift */,
@@ -125,6 +138,19 @@
 				81CFB4342B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift */,
 			);
 			path = GitXplorerUITests;
+			sourceTree = "<group>";
+		};
+		81CFB4412B7E1F3D009F5634 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81CFB4422B7E1F7E009F5634 /* Network.swift */,
+				81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */,
+				81CFB4462B7E2322009F5634 /* WebOperation.swift */,
+				81CFB4442B7E2010009F5634 /* Router.swift */,
+				810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */,
+				810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +286,12 @@
 			files = (
 				81CFB4162B7E13EA009F5634 /* ViewController.swift in Sources */,
 				81CFB4122B7E13EA009F5634 /* AppDelegate.swift in Sources */,
+				81CFB4492B7E236E009F5634 /* ConstructableRequest.swift in Sources */,
+				81CFB4472B7E2322009F5634 /* WebOperation.swift in Sources */,
+				810FEB582B7E673D00B2C1C7 /* NetworkUtils.swift in Sources */,
+				81CFB4452B7E2010009F5634 /* Router.swift in Sources */,
+				810FEB562B7E66B400B2C1C7 /* ResponseValidation.swift in Sources */,
+				81CFB4432B7E1F7E009F5634 /* Network.swift in Sources */,
 				81CFB4142B7E13EA009F5634 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +482,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +511,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
