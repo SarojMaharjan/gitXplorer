@@ -12,6 +12,7 @@ protocol RepoListingDelegate {
     func onDataUpdated()
     func shouldUpdateEmptyView()
     func shouldUpdatePageCounter()
+    func onError(error: Error)
 }
 class RepoListingViewModel: BaseViewModel {
     let dataPerPage = 10
@@ -20,7 +21,6 @@ class RepoListingViewModel: BaseViewModel {
             self.delegate?.onDataUpdated()
         }
     }
-    
     var delegate: RepoListingDelegate? = nil
     var sort: SearchSortOption? = nil {
         didSet {
@@ -63,6 +63,9 @@ class RepoListingViewModel: BaseViewModel {
         self.apiRequest(
             route: GitSearchRouter.repository(query: queryString, dataPerPage: dataPerPage, page: currentPage, sort: sort, order: order)) { [weak self] (response: GitRepoSearchResponse?, error) in
                 guard error == nil, let data = response else {
+                    if let error = error {
+                        self?.delegate?.onError(error: error)
+                    }
                     return
                 }
                 self?.totalPages = Int(ceil(Double(data.totalCount / 10)))

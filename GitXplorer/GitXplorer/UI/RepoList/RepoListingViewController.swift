@@ -102,6 +102,13 @@ extension RepoListingViewController: APICallStatusDelegate {
     }
 }
 extension RepoListingViewController: RepoListingDelegate {
+    func onError(error: Error) {
+        let alert = UIAlertController(title: "Sorry!!", message: Reachability.isConnectedToNetwork() ? error.localizedDescription : "Looks like you are not connected to the internet. Please connect to the internet and try again.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
     func onOrderChanged() {
         self.orderButton.image = UIImage(named: self.viewModel.order.imageName)
     }

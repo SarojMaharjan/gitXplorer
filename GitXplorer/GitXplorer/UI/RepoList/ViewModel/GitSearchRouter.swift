@@ -43,7 +43,7 @@ enum GitSearchRouter: Router {
     var headers: [String : String] {
         switch self {
         default:
-            var headers = [
+            let headers = [
                 "Accept": "application/vnd.github+json",
                 "X-GitHub-Api-Version": Constants.API.apiVersion,
             ]
