@@ -10,6 +10,7 @@ import Foundation
 protocol RepoListingDelegate {
     func onOrderChanged()
     func onDataUpdated()
+    func shouldUpdateEmptyView()
 }
 class RepoListingViewModel: BaseViewModel {
     let dataPerPage = 10
@@ -20,7 +21,12 @@ class RepoListingViewModel: BaseViewModel {
     }
     
     var delegate: RepoListingDelegate? = nil
-    var sort: SearchSortOption? = nil
+    var sort: SearchSortOption? = nil {
+        didSet {
+            //            guard sort != nil else { return }
+            //            initialFetch()
+        }
+    }
     
     var queryString: String = "" {
         didSet {
@@ -30,6 +36,7 @@ class RepoListingViewModel: BaseViewModel {
     var currentPage: Int = 0
     var order: SearchSortOrder = .asc {
         didSet {
+            //            initialFetch()
             self.delegate?.onOrderChanged()
         }
     }
@@ -37,11 +44,12 @@ class RepoListingViewModel: BaseViewModel {
     private func fetchGitRepositories(queryString: String) {
         self.apiRequest(
             route: GitSearchRouter.repository(query: queryString, dataPerPage: dataPerPage, page: currentPage, sort: sort, order: order)) { [weak self] (response: GitRepoSearchResponse?, error) in
-            guard error == nil, let data = response else {
-                return
+                guard error == nil, let data = response else {
+                    return
+                }
+                self?.repositories.append(contentsOf: data.items)
+                self?.delegate?.shouldUpdateEmptyView()
             }
-            self?.repositories.append(contentsOf: data.items)
-        }
     }
     
     func initialFetch() {
@@ -72,5 +80,5 @@ class RepoListingViewModel: BaseViewModel {
                 fetchNextPage()
             }
         }
-     }
+    }
 }

@@ -17,7 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qca-1j-39t">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-Q3-S0v">
+                                <rect key="frame" x="0.0" y="103" width="393" height="659"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-vt-09t">
+                                        <rect key="frame" x="64" y="321.66666666666669" width="265" height="16"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwr-dX-XV8">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="0.0"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-MM-AYk">
+                                                <rect key="frame" x="0.0" y="16" width="265" height="0.0"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vQN-vt-09t" firstAttribute="centerY" secondItem="cyF-Q3-S0v" secondAttribute="centerY" id="74P-6s-d3G"/>
+                                    <constraint firstItem="vQN-vt-09t" firstAttribute="leading" secondItem="cyF-Q3-S0v" secondAttribute="leading" constant="64" id="Kt8-ie-R78"/>
+                                    <constraint firstAttribute="trailing" secondItem="vQN-vt-09t" secondAttribute="trailing" constant="64" id="Pyp-jB-AHg"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qca-1j-39t">
                                 <rect key="frame" x="0.0" y="103" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dL-rO-sLK">
@@ -41,12 +69,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cyF-Q3-S0v" firstAttribute="top" secondItem="qca-1j-39t" secondAttribute="top" id="0wp-x6-QWA"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JBf-GN-2PQ"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="top" secondItem="qca-1j-39t" secondAttribute="bottom" id="KB5-3Q-eQG"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQ6-gk-RiK"/>
+                            <constraint firstItem="cyF-Q3-S0v" firstAttribute="trailing" secondItem="qca-1j-39t" secondAttribute="trailing" id="PNv-VE-Xto"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QFn-sv-S63"/>
+                            <constraint firstItem="cyF-Q3-S0v" firstAttribute="bottom" secondItem="qca-1j-39t" secondAttribute="bottom" id="Ucd-Uu-I8f"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fGt-XY-K0n"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jsv-aj-dTs"/>
+                            <constraint firstItem="cyF-Q3-S0v" firstAttribute="leading" secondItem="qca-1j-39t" secondAttribute="leading" id="vju-pF-mTM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qca-1j-39t" secondAttribute="trailing" id="wQg-Zi-Y2b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oaD-7d-b5x" secondAttribute="trailing" id="yIC-KL-zUV"/>
                         </constraints>
@@ -66,6 +98,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyView" destination="cyF-Q3-S0v" id="vfP-YM-lIo"/>
+                        <outlet property="emptyViewDescriptionLabel" destination="0UB-MM-AYk" id="fy4-np-9Uw"/>
+                        <outlet property="emptyViewTitleLabel" destination="Qwr-dX-XV8" id="eZr-xY-O2A"/>
                         <outlet property="gitRepoListingTableView" destination="qca-1j-39t" id="46V-75-CPM"/>
                         <outlet property="orderButton" destination="nqP-ej-lxd" id="18G-Jn-Kua"/>
                         <outlet property="repoSearchBar" destination="oaD-7d-b5x" id="a7K-pp-lJH"/>

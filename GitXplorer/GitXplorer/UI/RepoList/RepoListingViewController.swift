@@ -9,6 +9,9 @@ import UIKit
 
 class RepoListingViewController: UIViewController {
     
+    @IBOutlet weak var emptyViewDescriptionLabel: UILabel!
+    @IBOutlet weak var emptyViewTitleLabel: UILabel!
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var orderButton: UIBarButtonItem!
     @IBOutlet weak var sortingButton: UIBarButtonItem!
     @IBOutlet weak var gitRepoListingTableView: UITableView!
@@ -35,9 +38,27 @@ class RepoListingViewController: UIViewController {
     }
     
     private func setupTableView() {
+        updateEmptyView()
         self.gitRepoListingTableView.dataSource = self
         self.gitRepoListingTableView.delegate = self
         self.gitRepoListingTableView.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoTableViewCell")
+    }
+    
+    private func updateEmptyView() {
+        if self.viewModel.repositories.count == 0 && !viewModel.isLoading {
+            self.emptyView.isHidden = false
+            self.gitRepoListingTableView.isHidden = true
+            if self.viewModel.queryString == "" {
+                self.emptyViewTitleLabel.text = "Let's start Browsing"
+                self.emptyViewDescriptionLabel.text = "Browse for a git repository by typing into the search bar."
+            } else {
+                self.emptyViewTitleLabel.text = "No Result Found!!"
+                self.emptyViewDescriptionLabel.text = "Something went wrong. Please try again later."
+            }
+        } else {
+            self.emptyView.isHidden = true
+            self.gitRepoListingTableView.isHidden = false
+        }
     }
     
     @IBAction func onOrderButtonClicked(_ sender: Any) {
@@ -60,6 +81,10 @@ extension RepoListingViewController: RepoListingDelegate {
     
     func onDataUpdated() {
         self.gitRepoListingTableView.reloadData()
+    }
+    
+    func shouldUpdateEmptyView() {
+        updateEmptyView()
     }
 }
 extension RepoListingViewController: UISearchBarDelegate {
