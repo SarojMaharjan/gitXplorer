@@ -33,7 +33,11 @@ class Network {
     
     func request<T: Decodable>() -> AnyPublisher<Response<T>, Error> {
         self.webService.router = router
-        guard let request = webService.buildRequest() else { fatalError("Unable to build api request.") }
+        guard var request = webService.buildRequest() else { fatalError("Unable to build api request.") }
+        request.cachePolicy = .returnCacheDataDontLoad
+        if Reachability.isConnectedToNetwork() {
+            request.cachePolicy = .reloadRevalidatingCacheData
+        }
         return urlSession
             .dataTaskPublisher(for: request)
             .validateStatusCode()

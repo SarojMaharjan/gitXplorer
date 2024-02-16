@@ -37,6 +37,7 @@
 		81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */; };
 		81D83F632B7F94CA00B4A38B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F622B7F94CA00B4A38B /* SnapKit */; };
 		81D83F6A2B7FA8EE00B4A38B /* NicoProgress in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F692B7FA8EE00B4A38B /* NicoProgress */; };
+		81D83F6C2B7FAEF100B4A38B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F6B2B7FAEF100B4A38B /* Reachability.swift */; };
 		81E35FB02B7F2C1F00C1900D /* SearchSortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */; };
 		81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		81D83F552B7F64D400B4A38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		81D83F572B7F680300B4A38B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		81D83F6B2B7FAEF100B4A38B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +246,7 @@
 				81CFB4442B7E2010009F5634 /* Router.swift */,
 				810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */,
 				810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */,
+				81D83F6B2B7FAEF100B4A38B /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				810FEB582B7E673D00B2C1C7 /* NetworkUtils.swift in Sources */,
 				810FEB622B7E6EC200B2C1C7 /* GitRepository.swift in Sources */,
 				81D83F582B7F680300B4A38B /* Extensions.swift in Sources */,
+				81D83F6C2B7FAEF100B4A38B /* Reachability.swift in Sources */,
 				81CFB4452B7E2010009F5634 /* Router.swift in Sources */,
 				810FEB712B7E731200B2C1C7 /* GitSearchRouter.swift in Sources */,
 				81D83F562B7F64D400B4A38B /* Utils.swift in Sources */,

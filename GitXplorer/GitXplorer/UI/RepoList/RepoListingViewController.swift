@@ -121,10 +121,14 @@ extension RepoListingViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchBar.text = ""
         self.viewModel.cancelSearch()
+        self.updateEmptyView()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.viewModel.queryString = searchText
+        if searchText == "" {
+            self.updateEmptyView()
+        }
     }
 }
 extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource {
