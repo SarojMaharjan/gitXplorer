@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "nicoprogress",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicorichard/NicoProgress",
+      "state" : {
+        "revision" : "8696b2e3e89dd3a5dc502f53329b0d70858c4175",
+        "version" : "0.4.0"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit.git",

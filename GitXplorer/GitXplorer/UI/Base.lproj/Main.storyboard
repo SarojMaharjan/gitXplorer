@@ -83,6 +83,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nRG-iE-BO2"/>
                                 </connections>
                             </searchBar>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5M-NO-bkY" customClass="NicoProgressBar" customModule="NicoProgress">
+                                <rect key="frame" x="0.0" y="760" width="393" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="o4e-9b-DVg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,8 +102,11 @@
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="trailing" secondItem="qca-1j-39t" secondAttribute="trailing" id="PNv-VE-Xto"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QFn-sv-S63"/>
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="bottom" secondItem="qca-1j-39t" secondAttribute="bottom" id="Ucd-Uu-I8f"/>
+                            <constraint firstItem="oaD-7d-b5x" firstAttribute="top" secondItem="o5M-NO-bkY" secondAttribute="bottom" id="YpG-5x-mPV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MyQ-m6-ko8" secondAttribute="trailing" id="ccp-OO-kA8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o5M-NO-bkY" secondAttribute="trailing" id="d1K-Lk-yOs"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fGt-XY-K0n"/>
+                            <constraint firstItem="o5M-NO-bkY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gC7-hR-BRS"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jsv-aj-dTs"/>
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="leading" secondItem="qca-1j-39t" secondAttribute="leading" id="vju-pF-mTM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qca-1j-39t" secondAttribute="trailing" id="wQg-Zi-Y2b"/>
@@ -118,6 +128,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="apiProgressIndicator" destination="o5M-NO-bkY" id="Io5-2B-gL3"/>
                         <outlet property="emptyView" destination="cyF-Q3-S0v" id="vfP-YM-lIo"/>
                         <outlet property="emptyViewDescriptionLabel" destination="0UB-MM-AYk" id="fy4-np-9Uw"/>
                         <outlet property="emptyViewTitleLabel" destination="Qwr-dX-XV8" id="eZr-xY-O2A"/>

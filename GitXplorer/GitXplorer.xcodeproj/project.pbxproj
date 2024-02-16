@@ -36,6 +36,7 @@
 		81D83F582B7F680300B4A38B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F572B7F680300B4A38B /* Extensions.swift */; };
 		81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */; };
 		81D83F632B7F94CA00B4A38B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F622B7F94CA00B4A38B /* SnapKit */; };
+		81D83F6A2B7FA8EE00B4A38B /* NicoProgress in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F692B7FA8EE00B4A38B /* NicoProgress */; };
 		81E35FB02B7F2C1F00C1900D /* SearchSortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */; };
 		81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D83F6A2B7FA8EE00B4A38B /* NicoProgress in Frameworks */,
 				81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */,
 				81D83F632B7F94CA00B4A38B /* SnapKit in Frameworks */,
 			);
@@ -274,6 +276,7 @@
 			packageProductDependencies = (
 				81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */,
 				81D83F622B7F94CA00B4A38B /* SnapKit */,
+				81D83F692B7FA8EE00B4A38B /* NicoProgress */,
 			);
 			productName = GitXplorer;
 			productReference = 81CFB40E2B7E13EA009F5634 /* GitXplorer.app */;
@@ -350,6 +353,7 @@
 			packageReferences = (
 				81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				81D83F612B7F94CA00B4A38B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */,
 			);
 			productRefGroup = 81CFB40F2B7E13EA009F5634 /* Products */;
 			projectDirPath = "";
@@ -775,6 +779,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicorichard/NicoProgress";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 		81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -790,6 +802,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 81D83F612B7F94CA00B4A38B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		81D83F692B7FA8EE00B4A38B /* NicoProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */;
+			productName = NicoProgress;
 		};
 		81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

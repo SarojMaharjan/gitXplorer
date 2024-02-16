@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import NicoProgress
 
 class RepoListingViewController: UIViewController {
     
+    @IBOutlet weak var apiProgressIndicator: NicoProgressBar!
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var pageCounterView: UIView!
     @IBOutlet weak var emptyViewDescriptionLabel: UILabel!
@@ -35,6 +37,7 @@ class RepoListingViewController: UIViewController {
     }
     
     private func setUpUI() {
+        apiProgressIndicator.transition(to: .indeterminate)
         repoSearchBar.delegate = self
         self.onOrderChanged()
     }
@@ -82,7 +85,7 @@ class RepoListingViewController: UIViewController {
 }
 extension RepoListingViewController: APICallStatusDelegate {
     func onAPICallStateChanged(isLoading: Bool) {
-        
+        self.apiProgressIndicator.isHidden = !isLoading
     }
 }
 extension RepoListingViewController: RepoListingDelegate {
