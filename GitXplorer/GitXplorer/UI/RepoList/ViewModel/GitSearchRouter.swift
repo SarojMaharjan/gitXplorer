@@ -10,12 +10,19 @@ import Foundation
 enum GitSearchRouter: Router {
     static let baseURL = "\(Constants.API.baseURL)search/"
     
-    case repository(query: String, dataPerPage: Int, page: Int, sort: SearchSortOption, order: SearchSortOrder)
+    case repository(query: String, dataPerPage: Int, page: Int, sort: SearchSortOption?, order: SearchSortOrder?)
     
     var url: URL {
         switch self {
         case let .repository(query, dataPerPage, page, sorting, order):
-            return URL(string: "\(GitSearchRouter.baseURL)repositories?q=\(query)&per_page=\(dataPerPage)&page=\(page)&sort=\(sorting.rawValue)&order=\(order.rawValue)")!
+            var searchURL = "\(GitSearchRouter.baseURL)repositories?q=\(query)&per_page=\(dataPerPage)&page=\(page)"
+            if let sortingOption = sorting {
+                searchURL += "&sort=\(sortingOption.rawValue)"
+            }
+            if let orderOption = order {
+                searchURL += "&order=\(orderOption.rawValue)"
+            }
+            return URL(string: searchURL)!
         }
     }
     

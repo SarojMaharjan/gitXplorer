@@ -12,4 +12,13 @@ enum SearchSortOption: String, CaseIterable {
 }
 enum SearchSortOrder: String, CaseIterable {
     case desc, asc
+    
+    var imageName: String {
+        switch self {
+        case .desc:
+            return "order_descending"
+        case .asc:
+            return "order_ascending"
+        }
+    }
 }
