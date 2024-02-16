@@ -35,6 +35,7 @@ class RepoListingViewController: UIViewController {
     private func setupTableView() {
         self.gitRepoListingTableView.dataSource = self
         self.gitRepoListingTableView.delegate = self
+        self.gitRepoListingTableView.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoTableViewCell")
     }
     
     @IBAction func onOrderButtonClicked(_ sender: Any) {
@@ -61,9 +62,12 @@ extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.largeContentTitle = "Text for index: \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
