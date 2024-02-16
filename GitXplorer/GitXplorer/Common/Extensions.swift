@@ -14,3 +14,20 @@ extension Date {
         return formatter.string(from: self)
     }
 }
+extension HTTPURLResponse {
+    func logResponse(router: Router, data: Data) {
+        print("""
+            /** Request **/
+            URL: \(String.init(describing: router.url))
+            Header: \(String.init(describing: router.headers))
+            Method: \(String.init(describing: router.method))
+            Parameters: \(String.init(describing: router.parameters))
+            -------------------------------------------
+            /** Response **/
+            StatusCode: \(String.init(describing: self.statusCode ))
+            Response: \(NetworkUtils.serializeJSON(data: data))
+            -------------------------------------------
+            """
+        )
+    }
+}

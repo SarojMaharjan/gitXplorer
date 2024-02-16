@@ -43,19 +43,7 @@ class Network {
             .validateStatusCode()
             .tryMap { result -> Response<T> in
                 if let response = result.response as? HTTPURLResponse {
-                    print("""
-                        /** Request **/
-                        URL: \(String.init(describing: self.router.url))
-                        Header: \(String.init(describing: self.router.headers))
-                        Method: \(String.init(describing: self.router.method))
-                        Parameters: \(String.init(describing: self.router.parameters))
-                        -------------------------------------------
-                        /** Response **/
-                        StatusCode: \(String.init(describing: response.statusCode ))
-                        Response: \(NetworkUtils.serializeJSON(data: result.data))
-                        -------------------------------------------
-                        """
-                    )
+                    response.logResponse(router: self.router, data: result.data)
                 }
                 let value = try self.decoder.decode(T.self, from: result.data)
                 return Response(value: value, response: result.response)

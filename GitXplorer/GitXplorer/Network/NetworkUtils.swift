@@ -14,8 +14,6 @@ struct NetworkUtils {
             let json = try JSONSerialization.jsonObject(with: data, options: [])
             return json as AnyObject
         } catch let error as NSError {
-
-            print("JSONSerialization error:\(error.localizedDescription)")
             return [:] as AnyObject
         }
     }
@@ -28,7 +26,6 @@ struct NetworkUtils {
         }
         //decodeJSON
         catch let err {
-            print("Codable Error: ", err)
             return nil
         }
 
@@ -38,7 +35,6 @@ struct NetworkUtils {
     static func formatDictionaryAsJson(with dict: [String: Any]) {
         guard let theJSONData = try? JSONSerialization.data(withJSONObject: dict,
             options: [.prettyPrinted]) else {
-            print("Cannot format dictionary to data.")
             return
         }
         NetworkUtils.serializeJSON(data: theJSONData)
