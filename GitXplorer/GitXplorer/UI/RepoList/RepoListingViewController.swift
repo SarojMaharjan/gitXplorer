@@ -94,7 +94,7 @@ extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+        self.viewModel.shouldPrefetch(index: indexPath.row)
     }
     
 }

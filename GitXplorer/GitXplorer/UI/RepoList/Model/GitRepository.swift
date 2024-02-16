@@ -72,6 +72,18 @@ struct GitRepository: Codable {
         return "Updated on: \(updatedAt.inFormat(format: Constants.DateFormats.MMM_dd_yyyyy))"
     }
     
+    var ownerNameDisplayString: String {
+        return "- \(owner.login)"
+    }
+    
+    var openIssuesDisplayString: String {
+        return "Open issues: \(self.openIssuesCount)"
+    }
+    
+    var defaultBranchDisplayString: String {
+        return "Default branch: \(self.defaultBranch)"
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case nodeID = "node_id"

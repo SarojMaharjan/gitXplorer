@@ -84,14 +84,100 @@
                     <view key="view" contentMode="scaleToFill" id="jld-7M-p6s">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE1-Sc-cAq">
+                                <rect key="frame" x="0.0" y="691.33333333333337" width="393" height="126.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default branch: Master" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xij-8h-ebW">
+                                        <rect key="frame" x="16" y="106.33333333333326" width="361" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open issues: 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-OL-y5U">
+                                        <rect key="frame" x="16" y="85.333333333333258" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0d-cP-PaC">
+                                        <rect key="frame" x="16" y="50.333333333333258" width="361" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="- Saroj Maharjan"/>
+                                        <connections>
+                                            <action selector="onOwnerNameClicked:" destination="ECU-d1-2Zn" eventType="touchUpInside" id="r1U-tT-Gig"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbq-dA-6Pc">
+                                        <rect key="frame" x="16" y="16.000000000000004" width="361" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Repository Name">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onRepositoryNameClicked:" destination="ECU-d1-2Zn" eventType="touchUpInside" id="0cj-Oz-Zjk"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31h-1X-OxZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1"/>
+                                        <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="sZa-JJ-fu2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U0d-cP-PaC" firstAttribute="top" secondItem="vbq-dA-6Pc" secondAttribute="bottom" id="1Qf-Eq-RuI"/>
+                                    <constraint firstItem="vbq-dA-6Pc" firstAttribute="top" secondItem="FE1-Sc-cAq" secondAttribute="top" constant="16" id="26P-ML-n39"/>
+                                    <constraint firstItem="31h-1X-OxZ" firstAttribute="top" secondItem="FE1-Sc-cAq" secondAttribute="top" id="4na-Ok-dnf"/>
+                                    <constraint firstAttribute="trailing" secondItem="U0d-cP-PaC" secondAttribute="trailing" constant="16" id="7IX-E7-SFq"/>
+                                    <constraint firstItem="Xij-8h-ebW" firstAttribute="top" secondItem="N7q-OL-y5U" secondAttribute="bottom" id="9yP-Ky-FE3"/>
+                                    <constraint firstAttribute="trailing" secondItem="N7q-OL-y5U" secondAttribute="trailing" constant="16" id="Ebp-gx-kBb"/>
+                                    <constraint firstItem="N7q-OL-y5U" firstAttribute="leading" secondItem="FE1-Sc-cAq" secondAttribute="leading" constant="16" id="Vvo-DE-rjW"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbq-dA-6Pc" secondAttribute="trailing" constant="16" id="XE2-CC-Ne5"/>
+                                    <constraint firstItem="Xij-8h-ebW" firstAttribute="leading" secondItem="FE1-Sc-cAq" secondAttribute="leading" constant="16" id="atH-TT-psb"/>
+                                    <constraint firstItem="U0d-cP-PaC" firstAttribute="leading" secondItem="FE1-Sc-cAq" secondAttribute="leading" constant="16" id="cf9-Av-Jap"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xij-8h-ebW" secondAttribute="bottom" constant="4.2632564145606011e-14" id="dnU-lV-aMA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xij-8h-ebW" secondAttribute="trailing" constant="16" id="gki-3I-p9I"/>
+                                    <constraint firstItem="N7q-OL-y5U" firstAttribute="top" secondItem="U0d-cP-PaC" secondAttribute="bottom" id="pVr-Be-6dL"/>
+                                    <constraint firstAttribute="trailing" secondItem="31h-1X-OxZ" secondAttribute="trailing" id="sGM-vS-EJM"/>
+                                    <constraint firstItem="vbq-dA-6Pc" firstAttribute="leading" secondItem="FE1-Sc-cAq" secondAttribute="leading" constant="16" id="sie-5h-wQl"/>
+                                    <constraint firstItem="31h-1X-OxZ" firstAttribute="leading" secondItem="FE1-Sc-cAq" secondAttribute="leading" id="tnx-zv-tS1"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-sf-UDn">
+                                <rect key="frame" x="0.0" y="103" width="393" height="588.33333333333337"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PTQ-pe-Emy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FE1-Sc-cAq" firstAttribute="leading" secondItem="jld-7M-p6s" secondAttribute="leading" id="BJt-1y-DQs"/>
+                            <constraint firstItem="FE1-Sc-cAq" firstAttribute="top" secondItem="s4l-sf-UDn" secondAttribute="bottom" id="Jv3-56-NQM"/>
+                            <constraint firstAttribute="trailing" secondItem="FE1-Sc-cAq" secondAttribute="trailing" id="QRL-ef-H1Q"/>
+                            <constraint firstItem="PTQ-pe-Emy" firstAttribute="bottom" secondItem="FE1-Sc-cAq" secondAttribute="bottom" id="TxT-Bv-kWm"/>
+                            <constraint firstItem="s4l-sf-UDn" firstAttribute="top" secondItem="PTQ-pe-Emy" secondAttribute="top" id="Zt5-BY-y8I"/>
+                            <constraint firstItem="s4l-sf-UDn" firstAttribute="leading" secondItem="PTQ-pe-Emy" secondAttribute="leading" id="g7A-hC-tNS"/>
+                            <constraint firstItem="PTQ-pe-Emy" firstAttribute="trailing" secondItem="s4l-sf-UDn" secondAttribute="trailing" id="gwZ-Ax-kqQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jh6-yL-rf3"/>
+                    <connections>
+                        <outlet property="defaultBranchLabel" destination="Xij-8h-ebW" id="eBg-Zh-Hlz"/>
+                        <outlet property="openIssuesLabel" destination="N7q-OL-y5U" id="bYW-uu-TAm"/>
+                        <outlet property="ownerNameButton" destination="U0d-cP-PaC" id="nm2-7E-VCG"/>
+                        <outlet property="repositoryNameButton" destination="vbq-dA-6Pc" id="5s8-yG-gvC"/>
+                        <outlet property="webView" destination="s4l-sf-UDn" id="2aX-2s-v6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UB-di-5y6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="-494"/>
+            <point key="canvasLocation" x="1632.824427480916" y="-494.36619718309862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ug-2c-53f">
@@ -116,6 +202,9 @@
         <image name="sorting" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="underPageBackgroundColor">
+            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

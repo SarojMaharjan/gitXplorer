@@ -27,11 +27,7 @@ class RepoListingViewModel: BaseViewModel {
             initialFetch()
         }
     }
-    var currentPage: Int = 0 {
-        didSet {
-            
-        }
-    }
+    var currentPage: Int = 0
     var order: SearchSortOrder = .asc {
         didSet {
             self.delegate?.onOrderChanged()
@@ -57,6 +53,7 @@ class RepoListingViewModel: BaseViewModel {
     
     func fetchNextPage() {
         currentPage += 1
+        fetchGitRepositories(queryString: self.queryString)
     }
     
     func switchOrder() {
@@ -68,4 +65,12 @@ class RepoListingViewModel: BaseViewModel {
         self.currentPage = 0
         self.queryString = ""
     }
+    
+    func shouldPrefetch(index: Int) {
+        if !isLoading{
+            if  index >= self.repositories.count - 5 {
+                fetchNextPage()
+            }
+        }
+     }
 }
