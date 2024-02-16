@@ -34,6 +34,8 @@
 		81D83F542B7F481F00B4A38B /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D83F522B7F481F00B4A38B /* RepoTableViewCell.xib */; };
 		81D83F562B7F64D400B4A38B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F552B7F64D400B4A38B /* Utils.swift */; };
 		81D83F582B7F680300B4A38B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F572B7F680300B4A38B /* Extensions.swift */; };
+		81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */; };
+		81D83F5D2B7F799900B4A38B /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F5C2B7F799900B4A38B /* Ink */; };
 		81E35FB02B7F2C1F00C1900D /* SearchSortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */; };
 		81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,7 @@
 		81D83F522B7F481F00B4A38B /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		81D83F552B7F64D400B4A38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		81D83F572B7F680300B4A38B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */,
+				81D83F5D2B7F799900B4A38B /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 		810FEB5C2B7E6DF200B2C1C7 /* RepoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */,
 			);
 			path = RepoDetail;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			name = GitXplorer;
 			packageProductDependencies = (
 				81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */,
+				81D83F5C2B7F799900B4A38B /* Ink */,
 			);
 			productName = GitXplorer;
 			productReference = 81CFB40E2B7E13EA009F5634 /* GitXplorer.app */;
@@ -343,6 +349,7 @@
 			mainGroup = 81CFB4052B7E13EA009F5634;
 			packageReferences = (
 				81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				81D83F5B2B7F799900B4A38B /* XCRemoteSwiftPackageReference "ink" */,
 			);
 			productRefGroup = 81CFB40F2B7E13EA009F5634 /* Products */;
 			projectDirPath = "";
@@ -393,6 +400,7 @@
 				810FEB732B7E749B00B2C1C7 /* Constants.swift in Sources */,
 				810FEB6A2B7E6FFF00B2C1C7 /* RepoListingViewModel.swift in Sources */,
 				810FEB662B7E6F1100B2C1C7 /* Owner.swift in Sources */,
+				81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */,
 				81CFB4122B7E13EA009F5634 /* AppDelegate.swift in Sources */,
 				810FEB5E2B7E6E3A00B2C1C7 /* SceneDelegate.swift in Sources */,
 				81CFB4492B7E236E009F5634 /* ConstructableRequest.swift in Sources */,
@@ -759,6 +767,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		81D83F5B2B7F799900B4A38B /* XCRemoteSwiftPackageReference "ink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnsundell/ink.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
 		81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -770,6 +786,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		81D83F5C2B7F799900B4A38B /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D83F5B2B7F799900B4A38B /* XCRemoteSwiftPackageReference "ink" */;
+			productName = Ink;
+		};
 		81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;

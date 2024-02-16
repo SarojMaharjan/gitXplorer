@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qca-1j-39t">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qca-1j-39t">
                                 <rect key="frame" x="0.0" y="103" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dL-rO-sLK">
@@ -70,11 +70,28 @@
                         <outlet property="orderButton" destination="nqP-ej-lxd" id="18G-Jn-Kua"/>
                         <outlet property="repoSearchBar" destination="oaD-7d-b5x" id="a7K-pp-lJH"/>
                         <outlet property="sortingButton" destination="jrL-cA-Psj" id="uT9-7W-8cE"/>
+                        <segue destination="ECU-d1-2Zn" kind="show" identifier="showDetail" id="9gx-rZ-Hjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="-494"/>
+        </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="0xc-st-lME">
+            <objects>
+                <viewController storyboardIdentifier="RepoDetailViewController" id="ECU-d1-2Zn" customClass="RepoDetailViewController" customModule="GitXplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jld-7M-p6s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PTQ-pe-Emy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jh6-yL-rf3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2UB-di-5y6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="-494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ug-2c-53f">

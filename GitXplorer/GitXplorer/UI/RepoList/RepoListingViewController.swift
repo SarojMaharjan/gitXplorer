@@ -65,6 +65,7 @@ extension RepoListingViewController: RepoListingDelegate {
 extension RepoListingViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        searchBar.text = ""
         self.viewModel.cancelSearch()
     }
     
@@ -85,7 +86,11 @@ extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let repository = self.viewModel.repositories[indexPath.row]
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "RepoDetailViewController") as? RepoDetailViewController {
+            detailViewController.repository = repository
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
