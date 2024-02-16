@@ -68,6 +68,10 @@ struct GitRepository: Codable {
         return Utils.countToDisplayLabel(self.forksCount)
     }
     
+    var lastUpdateDisplayString: String {
+        return "Updated on: \(updatedAt.inFormat(format: Constants.DateFormats.MMM_dd_yyyyy))"
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case nodeID = "node_id"

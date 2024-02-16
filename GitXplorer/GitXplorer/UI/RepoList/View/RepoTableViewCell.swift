@@ -42,8 +42,8 @@ class RepoTableViewCell: UITableViewCell {
             self.starCountLabel.text = repo.starGazersCountDisplayString
             self.watcherCountLabel.text = repo.watchersCountDisplayString
             self.forkCountLabel.text = repo.forkCountDisplayString
-            self.authorNameLabel.text = repo.owner.login
-            self.lastUpdateLabel.text = repo.updatedAt.inFormat(format: Constants.DateFormats.MMM_dd_yyyyy)
+            self.authorNameLabel.text = "Author: \(repo.owner.login)"
+            self.lastUpdateLabel.text = repo.lastUpdateDisplayString
         }
     }
     

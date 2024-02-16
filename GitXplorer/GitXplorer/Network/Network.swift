@@ -9,7 +9,7 @@ import Foundation
 
 class Network {
     let urlSession: URLSession
-    
+    let decoder: JSONDecoder
     struct Response<T> {
         let value: T
         let response: URLResponse
@@ -27,9 +27,11 @@ class Network {
         self.router = router
         self.urlSession = URLSession.shared
         self.urlSession.configuration.timeoutIntervalForRequest = TimeInterval(40)
+        self.decoder = JSONDecoder()
+        self.decoder.dateDecodingStrategy = .iso8601
     }
     
-    func request<T: Decodable>(_ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<Response<T>, Error> {
+    func request<T: Decodable>() -> AnyPublisher<Response<T>, Error> {
         self.webService.router = router
         guard let request = webService.buildRequest() else { fatalError("Unable to build api request.") }
         return urlSession
@@ -51,7 +53,7 @@ class Network {
                         """
                     )
                 }
-                let value = try decoder.decode(T.self, from: result.data)
+                let value = try self.decoder.decode(T.self, from: result.data)
                 return Response(value: value, response: result.response)
             }
             .receive(on: DispatchQueue.main)
