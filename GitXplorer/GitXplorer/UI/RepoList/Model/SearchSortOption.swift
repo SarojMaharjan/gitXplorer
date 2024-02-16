@@ -9,6 +9,19 @@ import Foundation
 
 enum SearchSortOption: String, CaseIterable {
     case stars, forks, helpWanted = "help-wanted-issues", updated
+    
+    var displayName: String {
+        switch self {
+        case .stars:
+            "No of stars"
+        case .forks:
+            "No of Forks"
+        case .helpWanted:
+            "Help Wanted"
+        case .updated:
+            "Update date."
+        }
+    }
 }
 enum SearchSortOrder: String, CaseIterable {
     case desc, asc

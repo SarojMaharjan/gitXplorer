@@ -24,8 +24,8 @@ class RepoListingViewModel: BaseViewModel {
     var delegate: RepoListingDelegate? = nil
     var sort: SearchSortOption? = nil {
         didSet {
-            //            guard sort != nil else { return }
-            //            initialFetch()
+            guard sort != nil else { return }
+            initialFetch()
         }
     }
     
@@ -46,7 +46,7 @@ class RepoListingViewModel: BaseViewModel {
     }
     var order: SearchSortOrder = .asc {
         didSet {
-            //            initialFetch()
+            initialFetch()
             self.delegate?.onOrderChanged()
         }
     }

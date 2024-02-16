@@ -80,7 +80,18 @@ class RepoListingViewController: UIViewController {
     }
     
     @IBAction func onSortButtonClicked(_ sender: Any) {
-        print("sortbutton clicked")
+        let actionSheetController: UIAlertController = UIAlertController(title: "Sort by", message: "Select Sorting Option", preferredStyle: .actionSheet)
+        for sortOption in SearchSortOption.allCases {
+            let action: UIAlertAction = UIAlertAction(title: sortOption.displayName, style: .default) { action -> Void in
+                self.viewModel.sort = sortOption
+            }
+            actionSheetController.addAction(action)
+        }
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+            
+        }
+        actionSheetController.addAction(cancelAction)
+        self.present(actionSheetController, animated: true)
     }
 }
 extension RepoListingViewController: APICallStatusDelegate {
