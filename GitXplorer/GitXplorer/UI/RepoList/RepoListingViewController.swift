@@ -129,6 +129,7 @@ extension RepoListingViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.viewModel.queryString = searchText
         if searchText == "" {
+            self.viewModel.cancelSearch()
             self.updateEmptyView()
         }
     }
