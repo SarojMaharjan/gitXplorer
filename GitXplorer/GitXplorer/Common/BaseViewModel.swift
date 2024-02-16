@@ -26,9 +26,11 @@ class BaseViewModel {
     
     func apiRequest<T: Codable>(route: Router, onReceive: @escaping((T?, Error?) -> Void)) {
         self.isLoading = true
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.dateDecodingStrategy = .iso8601
         Network
             .init(router: route)
-            .request()
+            .request(jsonDecoder)
             .map{( $0.value as T )}
             .sink(receiveCompletion: { completion in
                 self.isLoading = false

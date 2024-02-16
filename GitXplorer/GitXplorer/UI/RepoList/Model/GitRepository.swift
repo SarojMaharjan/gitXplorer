@@ -13,9 +13,10 @@ struct GitRepository: Codable {
     let gitRepositoryPrivate: Bool
     let owner: Owner
     let htmlURL: String
-    let description: String
+    let description: String?
     let fork: Bool
-    let url, forksURL: String
+    let url: String?
+    let forksURL: String?
     let keysURL, collaboratorsURL: String
     let teamsURL, hooksURL: String
     let issueEventsURL: String
@@ -38,16 +39,16 @@ struct GitRepository: Codable {
     let gitURL, sshURL: String
     let cloneURL: String
     let svnURL: String
-    let homepage: String
+    let homepage: String?
     let size, stargazersCount, watchersCount: Int
-    let language: String
+    let language: String?
     let hasIssues, hasProjects, hasDownloads, hasWiki: Bool
     let hasPages, hasDiscussions: Bool
     let forksCount: Int
     let mirrorURL: String?
     let archived, disabled: Bool
     let openIssuesCount: Int
-    let license: License
+    let license: License?
     let allowForking, isTemplate, webCommitSignoffRequired: Bool
     let topics: [String]
     let visibility: String
@@ -55,6 +56,18 @@ struct GitRepository: Codable {
     let defaultBranch: String
     let score: Int
 
+    var starGazersCountDisplayString: String {
+        return Utils.countToDisplayLabel(self.stargazersCount)
+    }
+    
+    var watchersCountDisplayString: String {
+        return Utils.countToDisplayLabel(self.watchersCount)
+    }
+    
+    var forkCountDisplayString: String {
+        return Utils.countToDisplayLabel(self.forksCount)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case nodeID = "node_id"

@@ -8,9 +8,9 @@
 import Foundation
 
 struct License: Codable {
-    let key, name, spdxID: String
-    let url: String
-    let nodeID: String
+    let key, name, spdxID: String?
+    let url: String?
+    let nodeID: String?
 
     enum CodingKeys: String, CodingKey {
         case key, name

@@ -17,15 +17,34 @@ class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var lastUpdateLabel: UILabel!
     
+    var repository: GitRepository? {
+        didSet {
+            guard repository != nil else { return }
+            updateUI()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        updateUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateUI() {
+        if let repo = self.repository {
+            self.nameLabel.text = repo.name
+            self.repoDescriptionLabel.text = repo.description
+            self.starCountLabel.text = repo.starGazersCountDisplayString
+            self.watcherCountLabel.text = repo.watchersCountDisplayString
+            self.forkCountLabel.text = repo.forkCountDisplayString
+            self.authorNameLabel.text = repo.owner.login
+            self.lastUpdateLabel.text = repo.updatedAt.inFormat(format: Constants.DateFormats.MMM_dd_yyyyy)
+        }
     }
     
 }

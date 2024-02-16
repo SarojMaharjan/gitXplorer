@@ -26,9 +26,11 @@ class RepoListingViewController: UIViewController {
 
     private func setupViewModel() {
         self.viewModel.delegate = self
+        
     }
     
     private func setUpUI() {
+        repoSearchBar.delegate = self
         self.onOrderChanged()
     }
     
@@ -55,14 +57,30 @@ extension RepoListingViewController: RepoListingDelegate {
     func onOrderChanged() {
         self.orderButton.image = UIImage(named: self.viewModel.order.imageName)
     }
+    
+    func onDataUpdated() {
+        self.gitRepoListingTableView.reloadData()
+    }
+}
+extension RepoListingViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        self.viewModel.cancelSearch()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel.queryString = searchText
+    }
 }
 extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return self.viewModel.repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
+        let repository = self.viewModel.repositories[indexPath.row]
+        cell.repository = repository
         return cell
     }
     

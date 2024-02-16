@@ -9,17 +9,22 @@ import Foundation
 
 protocol RepoListingDelegate {
     func onOrderChanged()
+    func onDataUpdated()
 }
 class RepoListingViewModel: BaseViewModel {
     let dataPerPage = 10
-    var repositories: [GitRepository] = []
+    var repositories: [GitRepository] = [] {
+        didSet {
+            self.delegate?.onDataUpdated()
+        }
+    }
     
     var delegate: RepoListingDelegate? = nil
     var sort: SearchSortOption? = nil
     
     var queryString: String = "" {
         didSet {
-            
+            initialFetch()
         }
     }
     var currentPage: Int = 0 {
@@ -43,11 +48,24 @@ class RepoListingViewModel: BaseViewModel {
         }
     }
     
+    func initialFetch() {
+        guard queryString != "" else { return }
+        currentPage = 0
+        repositories.removeAll()
+        fetchGitRepositories(queryString: queryString)
+    }
+    
     func fetchNextPage() {
         currentPage += 1
     }
     
     func switchOrder() {
         self.order = self.order == .asc ? .desc : .asc
+    }
+    
+    func cancelSearch() {
+        self.repositories.removeAll()
+        self.currentPage = 0
+        self.queryString = ""
     }
 }
