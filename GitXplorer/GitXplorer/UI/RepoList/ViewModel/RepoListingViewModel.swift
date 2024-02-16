@@ -11,6 +11,7 @@ protocol RepoListingDelegate {
     func onOrderChanged()
     func onDataUpdated()
     func shouldUpdateEmptyView()
+    func shouldUpdatePageCounter()
 }
 class RepoListingViewModel: BaseViewModel {
     let dataPerPage = 10
@@ -33,12 +34,29 @@ class RepoListingViewModel: BaseViewModel {
             initialFetch()
         }
     }
-    var currentPage: Int = 0
+    var currentPage: Int = 0 {
+        didSet {
+            self.delegate?.shouldUpdatePageCounter()
+        }
+    }
+    var totalPages: Int = 0 {
+        didSet {
+            self.delegate?.shouldUpdatePageCounter()
+        }
+    }
     var order: SearchSortOrder = .asc {
         didSet {
             //            initialFetch()
             self.delegate?.onOrderChanged()
         }
+    }
+    var currentDisplayedIndex: Int = 0 {
+        didSet {
+            self.delegate?.shouldUpdatePageCounter()
+        }
+    }
+    var currentDisplayedPage: Int {
+        return Int(ceil(Double(currentDisplayedIndex / 10)))
     }
     
     private func fetchGitRepositories(queryString: String) {
@@ -47,6 +65,7 @@ class RepoListingViewModel: BaseViewModel {
                 guard error == nil, let data = response else {
                     return
                 }
+                self?.totalPages = Int(ceil(Double(data.totalCount / 10)))
                 self?.repositories.append(contentsOf: data.items)
                 self?.delegate?.shouldUpdateEmptyView()
             }
@@ -75,6 +94,7 @@ class RepoListingViewModel: BaseViewModel {
     }
     
     func shouldPrefetch(index: Int) {
+        self.currentDisplayedIndex = index
         if !isLoading{
             if  index >= self.repositories.count - 5 {
                 fetchNextPage()

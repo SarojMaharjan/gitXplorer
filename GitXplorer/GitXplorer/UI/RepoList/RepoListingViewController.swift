@@ -9,6 +9,8 @@ import UIKit
 
 class RepoListingViewController: UIViewController {
     
+    @IBOutlet weak var pageCountLabel: UILabel!
+    @IBOutlet weak var pageCounterView: UIView!
     @IBOutlet weak var emptyViewDescriptionLabel: UILabel!
     @IBOutlet weak var emptyViewTitleLabel: UILabel!
     @IBOutlet weak var emptyView: UIView!
@@ -61,6 +63,15 @@ class RepoListingViewController: UIViewController {
         }
     }
     
+    private func updatePageCounterView() {
+        if self.viewModel.repositories.count == 0 && !viewModel.isLoading {
+            self.pageCounterView.isHidden = true
+        } else {
+            self.pageCounterView.isHidden = false
+            self.pageCountLabel.text = "\(viewModel.currentDisplayedPage) / \(viewModel.totalPages)"
+        }
+    }
+    
     @IBAction func onOrderButtonClicked(_ sender: Any) {
         self.viewModel.switchOrder()
     }
@@ -85,6 +96,10 @@ extension RepoListingViewController: RepoListingDelegate {
     
     func shouldUpdateEmptyView() {
         updateEmptyView()
+    }
+    
+    func shouldUpdatePageCounter() {
+        updatePageCounterView()
     }
 }
 extension RepoListingViewController: UISearchBarDelegate {

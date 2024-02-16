@@ -48,12 +48,30 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qca-1j-39t">
                                 <rect key="frame" x="0.0" y="103" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dL-rO-sLK">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </tableView>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyQ-m6-ko8">
+                                <rect key="frame" x="377" y="746" width="16" height="16"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbS-0S-q9J">
+                                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="nbS-0S-q9J" firstAttribute="leading" secondItem="MyQ-m6-ko8" secondAttribute="leading" constant="8" id="KaC-XK-FO3"/>
+                                    <constraint firstAttribute="trailing" secondItem="nbS-0S-q9J" secondAttribute="trailing" constant="8" id="lXK-KV-NwZ"/>
+                                    <constraint firstItem="nbS-0S-q9J" firstAttribute="top" secondItem="MyQ-m6-ko8" secondAttribute="top" constant="8" id="szo-KV-4Ge"/>
+                                    <constraint firstAttribute="bottom" secondItem="nbS-0S-q9J" secondAttribute="bottom" constant="8" id="ySe-XN-rwd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <searchBar contentMode="redraw" placeholder="Search for git repository..." showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaD-7d-b5x">
                                 <rect key="frame" x="0.0" y="762" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -73,9 +91,11 @@
                             <constraint firstItem="qca-1j-39t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JBf-GN-2PQ"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="top" secondItem="qca-1j-39t" secondAttribute="bottom" id="KB5-3Q-eQG"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQ6-gk-RiK"/>
+                            <constraint firstItem="oaD-7d-b5x" firstAttribute="top" secondItem="MyQ-m6-ko8" secondAttribute="bottom" id="OLo-jJ-fpA"/>
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="trailing" secondItem="qca-1j-39t" secondAttribute="trailing" id="PNv-VE-Xto"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QFn-sv-S63"/>
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="bottom" secondItem="qca-1j-39t" secondAttribute="bottom" id="Ucd-Uu-I8f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MyQ-m6-ko8" secondAttribute="trailing" id="ccp-OO-kA8"/>
                             <constraint firstItem="qca-1j-39t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fGt-XY-K0n"/>
                             <constraint firstItem="oaD-7d-b5x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jsv-aj-dTs"/>
                             <constraint firstItem="cyF-Q3-S0v" firstAttribute="leading" secondItem="qca-1j-39t" secondAttribute="leading" id="vju-pF-mTM"/>
@@ -103,6 +123,8 @@
                         <outlet property="emptyViewTitleLabel" destination="Qwr-dX-XV8" id="eZr-xY-O2A"/>
                         <outlet property="gitRepoListingTableView" destination="qca-1j-39t" id="46V-75-CPM"/>
                         <outlet property="orderButton" destination="nqP-ej-lxd" id="18G-Jn-Kua"/>
+                        <outlet property="pageCountLabel" destination="nbS-0S-q9J" id="40l-02-CBm"/>
+                        <outlet property="pageCounterView" destination="MyQ-m6-ko8" id="ETG-cI-Hri"/>
                         <outlet property="repoSearchBar" destination="oaD-7d-b5x" id="a7K-pp-lJH"/>
                         <outlet property="sortingButton" destination="jrL-cA-Psj" id="uT9-7W-8cE"/>
                         <segue destination="ECU-d1-2Zn" kind="show" identifier="showDetail" id="9gx-rZ-Hjg"/>
