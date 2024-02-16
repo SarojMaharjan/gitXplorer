@@ -7,15 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810FEB562B7E66B400B2C1C7 /* ResponseValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */; };
+		810FEB582B7E673D00B2C1C7 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */; };
+		810FEB5E2B7E6E3A00B2C1C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */; };
+		810FEB622B7E6EC200B2C1C7 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB612B7E6EC200B2C1C7 /* GitRepository.swift */; };
+		810FEB642B7E6EFD00B2C1C7 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB632B7E6EFD00B2C1C7 /* License.swift */; };
+		810FEB662B7E6F1100B2C1C7 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB652B7E6F1100B2C1C7 /* Owner.swift */; };
+		810FEB682B7E6F5100B2C1C7 /* GitRepoSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB672B7E6F5100B2C1C7 /* GitRepoSearchResponse.swift */; };
+		810FEB6A2B7E6FFF00B2C1C7 /* RepoListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB692B7E6FFF00B2C1C7 /* RepoListingViewModel.swift */; };
+		810FEB6F2B7E706100B2C1C7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB6E2B7E706100B2C1C7 /* BaseViewModel.swift */; };
+		810FEB712B7E731200B2C1C7 /* GitSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB702B7E731200B2C1C7 /* GitSearchRouter.swift */; };
+		810FEB732B7E749B00B2C1C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FEB722B7E749B00B2C1C7 /* Constants.swift */; };
 		81CFB4122B7E13EA009F5634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4112B7E13EA009F5634 /* AppDelegate.swift */; };
-		81CFB4142B7E13EA009F5634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */; };
-		81CFB4162B7E13EA009F5634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4152B7E13EA009F5634 /* ViewController.swift */; };
+		81CFB4162B7E13EA009F5634 /* RepoListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4152B7E13EA009F5634 /* RepoListingViewController.swift */; };
 		81CFB4192B7E13EA009F5634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CFB4172B7E13EA009F5634 /* Main.storyboard */; };
 		81CFB41B2B7E13ED009F5634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CFB41A2B7E13ED009F5634 /* Assets.xcassets */; };
 		81CFB41E2B7E13ED009F5634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CFB41C2B7E13ED009F5634 /* LaunchScreen.storyboard */; };
 		81CFB4292B7E13EE009F5634 /* GitXplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4282B7E13EE009F5634 /* GitXplorerTests.swift */; };
 		81CFB4332B7E13EE009F5634 /* GitXplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4322B7E13EE009F5634 /* GitXplorerUITests.swift */; };
 		81CFB4352B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4342B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift */; };
+		81CFB4432B7E1F7E009F5634 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4422B7E1F7E009F5634 /* Network.swift */; };
+		81CFB4452B7E2010009F5634 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4442B7E2010009F5634 /* Router.swift */; };
+		81CFB4472B7E2322009F5634 /* WebOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4462B7E2322009F5634 /* WebOperation.swift */; };
+		81CFB4492B7E236E009F5634 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */; };
+		81D83F532B7F481F00B4A38B /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F512B7F481F00B4A38B /* RepoTableViewCell.swift */; };
+		81D83F542B7F481F00B4A38B /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D83F522B7F481F00B4A38B /* RepoTableViewCell.xib */; };
+		81D83F562B7F64D400B4A38B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F552B7F64D400B4A38B /* Utils.swift */; };
+		81D83F582B7F680300B4A38B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F572B7F680300B4A38B /* Extensions.swift */; };
+		81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */; };
+		81D83F6A2B7FA8EE00B4A38B /* NicoProgress in Frameworks */ = {isa = PBXBuildFile; productRef = 81D83F692B7FA8EE00B4A38B /* NicoProgress */; };
+		81D83F6C2B7FAEF100B4A38B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83F6B2B7FAEF100B4A38B /* Reachability.swift */; };
+		81E35FB02B7F2C1F00C1900D /* SearchSortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */; };
+		81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +59,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidation.swift; sourceTree = "<group>"; };
+		810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		810FEB612B7E6EC200B2C1C7 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
+		810FEB632B7E6EFD00B2C1C7 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		810FEB652B7E6F1100B2C1C7 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		810FEB672B7E6F5100B2C1C7 /* GitRepoSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoSearchResponse.swift; sourceTree = "<group>"; };
+		810FEB692B7E6FFF00B2C1C7 /* RepoListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListingViewModel.swift; sourceTree = "<group>"; };
+		810FEB6E2B7E706100B2C1C7 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		810FEB702B7E731200B2C1C7 /* GitSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSearchRouter.swift; sourceTree = "<group>"; };
+		810FEB722B7E749B00B2C1C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81CFB40E2B7E13EA009F5634 /* GitXplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitXplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CFB4112B7E13EA009F5634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81CFB4152B7E13EA009F5634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81CFB4152B7E13EA009F5634 /* RepoListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListingViewController.swift; sourceTree = "<group>"; };
 		81CFB4182B7E13EA009F5634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81CFB41A2B7E13ED009F5634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81CFB41D2B7E13ED009F5634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +82,17 @@
 		81CFB42E2B7E13EE009F5634 /* GitXplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitXplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CFB4322B7E13EE009F5634 /* GitXplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitXplorerUITests.swift; sourceTree = "<group>"; };
 		81CFB4342B7E13EE009F5634 /* GitXplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitXplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81CFB4422B7E1F7E009F5634 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		81CFB4442B7E2010009F5634 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		81CFB4462B7E2322009F5634 /* WebOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebOperation.swift; sourceTree = "<group>"; };
+		81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructableRequest.swift; sourceTree = "<group>"; };
+		81D83F512B7F481F00B4A38B /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		81D83F522B7F481F00B4A38B /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		81D83F552B7F64D400B4A38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		81D83F572B7F680300B4A38B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		81D83F6B2B7FAEF100B4A38B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D83F6A2B7FA8EE00B4A38B /* NicoProgress in Frameworks */,
+				81E35FB32B7F324600C1900D /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +122,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810FEB592B7E6D7700B2C1C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				810FEB5C2B7E6DF200B2C1C7 /* RepoDetail */,
+				810FEB5B2B7E6DDB00B2C1C7 /* RepoList */,
+				81CFB4172B7E13EA009F5634 /* Main.storyboard */,
+				81CFB41C2B7E13ED009F5634 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		810FEB5B2B7E6DDB00B2C1C7 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				81D83F502B7F480C00B4A38B /* View */,
+				810FEB602B7E6EAC00B2C1C7 /* Model */,
+				810FEB5F2B7E6E9B00B2C1C7 /* ViewModel */,
+				81CFB4152B7E13EA009F5634 /* RepoListingViewController.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		810FEB5C2B7E6DF200B2C1C7 /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				81D83F592B7F6B7D00B4A38B /* RepoDetailViewController.swift */,
+			);
+			path = RepoDetail;
+			sourceTree = "<group>";
+		};
+		810FEB5F2B7E6E9B00B2C1C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				810FEB692B7E6FFF00B2C1C7 /* RepoListingViewModel.swift */,
+				810FEB702B7E731200B2C1C7 /* GitSearchRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		810FEB602B7E6EAC00B2C1C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				810FEB612B7E6EC200B2C1C7 /* GitRepository.swift */,
+				810FEB632B7E6EFD00B2C1C7 /* License.swift */,
+				810FEB652B7E6F1100B2C1C7 /* Owner.swift */,
+				810FEB672B7E6F5100B2C1C7 /* GitRepoSearchResponse.swift */,
+				81E35FAF2B7F2C1F00C1900D /* SearchSortOption.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		810FEB6B2B7E701E00B2C1C7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				810FEB6E2B7E706100B2C1C7 /* BaseViewModel.swift */,
+				810FEB722B7E749B00B2C1C7 /* Constants.swift */,
+				81D83F552B7F64D400B4A38B /* Utils.swift */,
+				81D83F572B7F680300B4A38B /* Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		81CFB4052B7E13EA009F5634 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +207,12 @@
 		81CFB4102B7E13EA009F5634 /* GitXplorer */ = {
 			isa = PBXGroup;
 			children = (
+				810FEB6B2B7E701E00B2C1C7 /* Common */,
+				810FEB592B7E6D7700B2C1C7 /* UI */,
+				81CFB4412B7E1F3D009F5634 /* Network */,
 				81CFB4112B7E13EA009F5634 /* AppDelegate.swift */,
 				81CFB4132B7E13EA009F5634 /* SceneDelegate.swift */,
-				81CFB4152B7E13EA009F5634 /* ViewController.swift */,
-				81CFB4172B7E13EA009F5634 /* Main.storyboard */,
 				81CFB41A2B7E13ED009F5634 /* Assets.xcassets */,
-				81CFB41C2B7E13ED009F5634 /* LaunchScreen.storyboard */,
 				81CFB41F2B7E13ED009F5634 /* Info.plist */,
 			);
 			path = GitXplorer;
@@ -127,6 +235,29 @@
 			path = GitXplorerUITests;
 			sourceTree = "<group>";
 		};
+		81CFB4412B7E1F3D009F5634 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81CFB4422B7E1F7E009F5634 /* Network.swift */,
+				81CFB4482B7E236E009F5634 /* ConstructableRequest.swift */,
+				81CFB4462B7E2322009F5634 /* WebOperation.swift */,
+				81CFB4442B7E2010009F5634 /* Router.swift */,
+				810FEB552B7E66B400B2C1C7 /* ResponseValidation.swift */,
+				810FEB572B7E673D00B2C1C7 /* NetworkUtils.swift */,
+				81D83F6B2B7FAEF100B4A38B /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		81D83F502B7F480C00B4A38B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81D83F512B7F481F00B4A38B /* RepoTableViewCell.swift */,
+				81D83F522B7F481F00B4A38B /* RepoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +274,10 @@
 			dependencies = (
 			);
 			name = GitXplorer;
+			packageProductDependencies = (
+				81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */,
+				81D83F692B7FA8EE00B4A38B /* NicoProgress */,
+			);
 			productName = GitXplorer;
 			productReference = 81CFB40E2B7E13EA009F5634 /* GitXplorer.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +350,10 @@
 				Base,
 			);
 			mainGroup = 81CFB4052B7E13EA009F5634;
+			packageReferences = (
+				81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */,
+			);
 			productRefGroup = 81CFB40F2B7E13EA009F5634 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +373,7 @@
 				81CFB41E2B7E13ED009F5634 /* LaunchScreen.storyboard in Resources */,
 				81CFB41B2B7E13ED009F5634 /* Assets.xcassets in Resources */,
 				81CFB4192B7E13EA009F5634 /* Main.storyboard in Resources */,
+				81D83F542B7F481F00B4A38B /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +398,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CFB4162B7E13EA009F5634 /* ViewController.swift in Sources */,
+				81E35FB02B7F2C1F00C1900D /* SearchSortOption.swift in Sources */,
+				81CFB4162B7E13EA009F5634 /* RepoListingViewController.swift in Sources */,
+				810FEB732B7E749B00B2C1C7 /* Constants.swift in Sources */,
+				810FEB6A2B7E6FFF00B2C1C7 /* RepoListingViewModel.swift in Sources */,
+				810FEB662B7E6F1100B2C1C7 /* Owner.swift in Sources */,
+				81D83F5A2B7F6B7D00B4A38B /* RepoDetailViewController.swift in Sources */,
 				81CFB4122B7E13EA009F5634 /* AppDelegate.swift in Sources */,
-				81CFB4142B7E13EA009F5634 /* SceneDelegate.swift in Sources */,
+				810FEB5E2B7E6E3A00B2C1C7 /* SceneDelegate.swift in Sources */,
+				81CFB4492B7E236E009F5634 /* ConstructableRequest.swift in Sources */,
+				81D83F532B7F481F00B4A38B /* RepoTableViewCell.swift in Sources */,
+				810FEB682B7E6F5100B2C1C7 /* GitRepoSearchResponse.swift in Sources */,
+				81CFB4472B7E2322009F5634 /* WebOperation.swift in Sources */,
+				810FEB582B7E673D00B2C1C7 /* NetworkUtils.swift in Sources */,
+				810FEB622B7E6EC200B2C1C7 /* GitRepository.swift in Sources */,
+				81D83F582B7F680300B4A38B /* Extensions.swift in Sources */,
+				81D83F6C2B7FAEF100B4A38B /* Reachability.swift in Sources */,
+				81CFB4452B7E2010009F5634 /* Router.swift in Sources */,
+				810FEB712B7E731200B2C1C7 /* GitSearchRouter.swift in Sources */,
+				81D83F562B7F64D400B4A38B /* Utils.swift in Sources */,
+				810FEB6F2B7E706100B2C1C7 /* BaseViewModel.swift in Sources */,
+				810FEB562B7E66B400B2C1C7 /* ResponseValidation.swift in Sources */,
+				810FEB642B7E6EFD00B2C1C7 /* License.swift in Sources */,
+				81CFB4432B7E1F7E009F5634 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +610,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +639,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +769,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicorichard/NicoProgress";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81D83F692B7FA8EE00B4A38B /* NicoProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D83F682B7FA8EE00B4A38B /* XCRemoteSwiftPackageReference "NicoProgress" */;
+			productName = NicoProgress;
+		};
+		81E35FB22B7F324600C1900D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81E35FB12B7F324600C1900D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81CFB4062B7E13EA009F5634 /* Project object */;
 }
