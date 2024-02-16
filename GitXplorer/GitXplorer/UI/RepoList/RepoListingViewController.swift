@@ -20,8 +20,9 @@ class RepoListingViewController: UIViewController {
     @IBOutlet weak var sortingButton: UIBarButtonItem!
     @IBOutlet weak var gitRepoListingTableView: UITableView!
     @IBOutlet weak var repoSearchBar: UISearchBar!
-
+    
     lazy var viewModel: RepoListingViewModel = RepoListingViewModel(apiCallStateDelegate: self)
+    var lastContentOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class RepoListingViewController: UIViewController {
         setupTableView()
         setupViewModel()
     }
-
+    
     private func setupViewModel() {
         self.viewModel.delegate = self
         
@@ -46,6 +47,7 @@ class RepoListingViewController: UIViewController {
         updateEmptyView()
         self.gitRepoListingTableView.dataSource = self
         self.gitRepoListingTableView.delegate = self
+        
         self.gitRepoListingTableView.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoTableViewCell")
     }
     
@@ -153,6 +155,22 @@ extension RepoListingViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewModel.shouldPrefetch(index: indexPath.row)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.lastContentOffset < scrollView.contentOffset.y {
+            // did move up
+            self.repoSearchBar.resignFirstResponder()
+        } else if self.lastContentOffset > scrollView.contentOffset.y {
+            // did move down
+            self.repoSearchBar.resignFirstResponder()
+        } else {
+            // didn't move
+        }
     }
     
 }
